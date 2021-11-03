@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var pierwsza = 0
-        var druga = 0
-        var wynik = 0
+        var pierwsza = 0;
+        var druga = 0;
+        var wynik = 0;
 
         super.onCreate(savedInstanceState)
 
@@ -41,13 +41,17 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
 
             findViewById<Button>(R.id.btn4).setOnClickListener(){
-                findViewById<TextView>(R.id.wyniktekst).text = findViewById<TextInputEditText>(R.id.textinput1).text.toString()
+                findViewById<TextView>(R.id.wyniktekst).text = findViewById<TextInputEditText>(R.id.textinput3).toString()
+            }
+            findViewById<Button>(R.id.btn1).setOnClickListener(){
+                pierwsza = findViewById<TextInputEditText>(R.id.textinput1).text.toString().toInt()
+            }
+            findViewById<Button>(R.id.btn3).setOnClickListener(){
+                druga = findViewById<TextInputEditText>(R.id.textinput2).text.toString().toInt()
             }
             findViewById<Button>(R.id.btn2).setOnClickListener(){
-                pierwsza = findViewById<TextInputEditText>(R.id.textinput1).text.toString().toInt()
-                druga = findViewById<TextInputEditText>(R.id.textinput2).text.toString().toInt()
                 wynik = pierwsza + druga
-                findViewById<TextView>(R.id.wynik).text = pierwsza + "+" + druga + "=" + wynik
+                findViewById<TextView>(R.id.wynik).text = pierwsza.toString() + "+" + druga.toString() + "=" + wynik.toString()
             }
         }
 
