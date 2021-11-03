@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         var pierwsza = 0
         var druga = 0
         var wynik = 0
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,17 +40,15 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
 
-            findViewById<Button>(R.id.btn1).setOnClickListener(){
-                findViewById<TextView>(R.id.wynik).text = findViewById<TextInputEditText>(R.id.textinput1).text.toString() + "+"
-            }
-            findViewById<Button>(R.id.btn3).setOnClickListener(){
-                findViewById<TextView>(R.id.wynik).text = findViewById<TextInputEditText>(R.id.textinput1).text.toString() + "+" + findViewById<TextInputEditText>(R.id.textinput2).text.toString()
+            findViewById<Button>(R.id.btn4).setOnClickListener(){
+                findViewById<TextView>(R.id.wyniktekst).text = findViewById<TextInputEditText>(R.id.textinput1).text.toString()
             }
             findViewById<Button>(R.id.btn2).setOnClickListener(){
-                findViewById<TextView>(R.id.wynik).text = "ebe"
+                pierwsza = findViewById<TextInputEditText>(R.id.textinput1).text.toString().toInt()
+                druga = findViewById<TextInputEditText>(R.id.textinput2).text.toString().toInt()
+                wynik = pierwsza + druga
+                findViewById<TextView>(R.id.wynik).text = pierwsza + "+" + druga + "=" + wynik
             }
-
-
         }
 
 
