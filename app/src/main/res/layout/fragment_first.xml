@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
@@ -10,7 +11,6 @@
         android:id="@+id/wynik"
         android:layout_width="135dp"
         android:layout_height="47dp"
-        android:text="Wynik"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,139 +18,132 @@
         app:layout_constraintVertical_bias="0.204" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnsumuj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zatwierdz nr.1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wynik" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="222dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="304dp"
         android:text="Sumuj"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn1"
-        app:layout_constraintTop_toBottomOf="@+id/wynik" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wynik"
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/liczba1"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="97dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wynik">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textinput2"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:hint="Wprowadz Liczbe nr.2
-"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wynik">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textinput1"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:hint="Wprowadz Liczbe nr.1
-" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="263dp"
-        android:layout_marginBottom="208dp"
-        android:text="Zatwierdz nr.2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnsumuj"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/wynik">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/numer2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnsumuj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liczba1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/podajtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="201dp"
-        android:text="Wyswietl Tekst"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="230dp"
+        android:text="Wprowadz tekst"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toEndOf="@+id/btn3"
-        app:layout_constraintTop_toBottomOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/zatwierdztxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numer2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/zatwierdztxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="225dp"
+        android:text="Zatwierdz Text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/podajtxt"
+        app:layout_constraintTop_toBottomOf="@+id/numer2"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/wyniktekst"
-        android:layout_width="118dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="185dp"
-        android:layout_marginBottom="53dp"
-        android:text="Tekst"
+        android:id="@+id/textview2"
+        android:layout_width="134dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="26dp"
+        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/wynik"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.366"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="137dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn3">
+        app:layout_constraintTop_toBottomOf="@+id/zatwierdztxt">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textinput3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Wprowadz Tekst" />
+            android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="133dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="11dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textview2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

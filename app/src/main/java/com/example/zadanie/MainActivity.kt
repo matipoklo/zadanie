@@ -10,10 +10,11 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import com.example.zadanie.R.id.liczba1
 import com.example.zadanie.databinding.ActivityMainBinding
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,22 +41,24 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
 
-            findViewById<Button>(R.id.btn4).setOnClickListener(){
-                findViewById<TextView>(R.id.wyniktekst).text = findViewById<TextInputEditText>(R.id.textinput3).toString()
+            findViewById<Button>(R.id.podajtxt).setOnClickListener() {
+                findViewById<TextView>(R.id.textview1).text = findViewById<EditText>(R.id.text).text
             }
-            findViewById<Button>(R.id.btn1).setOnClickListener(){
-                pierwsza = findViewById<TextInputEditText>(R.id.textinput1).text.toString().toInt()
+            findViewById<Button>(R.id.zatwierdztxt).setOnClickListener() {
+                findViewById<TextView>(R.id.textview2).text =
+                    findViewById<TextView>(R.id.textview2).text.toString() + findViewById<EditText>(R.id.text).toString()
             }
-            findViewById<Button>(R.id.btn3).setOnClickListener(){
-                druga = findViewById<TextInputEditText>(R.id.textinput2).text.toString().toInt()
-            }
-            findViewById<Button>(R.id.btn2).setOnClickListener(){
+            findViewById<Button>(R.id.btnsumuj).setOnClickListener() {
+                pierwsza = findViewById<TextInputEditText>(R.id.liczba1).text.toString().toInt()
+                druga = findViewById<TextInputEditText>(R.id.numer2).text.toString().toInt()
                 wynik = pierwsza + druga
-                findViewById<TextView>(R.id.wynik).text = pierwsza.toString() + "+" + druga.toString() + "=" + wynik.toString()
+                findViewById<TextView>(R.id.wynik).text =
+                    pierwsza.toString() + "+" + druga.toString() + "=" + wynik.toString()
+
             }
+
+
         }
-
-
 
     }
 
