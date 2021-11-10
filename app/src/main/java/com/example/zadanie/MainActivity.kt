@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 druga = findViewById<TextInputEditText>(R.id.numer2).text.toString().toInt()
                 wynik = pierwsza + druga
                 findViewById<TextView>(R.id.wynik).text =
-                    pierwsza.toString() + "+" + druga.toString() + "=" + wynik.toString()
+                    pierwsza.toString() + "+" + druga.toString() + "=" + wynik.toString(
 
             }
 
